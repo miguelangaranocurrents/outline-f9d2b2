@@ -194,6 +194,8 @@ class ErrorBoundaryClass extends React.Component<Props> {
             </Text>
           )}
           {this.showDetails && <Pre>{error.stack}</Pre>}
+          {/* TEMP-DEBUG: remove before merging */}
+          <Pre>{`TEMP-DEBUG ${error.message}\n${error.stack}`}</Pre>
           <Flex gap={8} wrap>
             {this.isRepeatedError && (
               <Button onClick={this.handleClearCache}>
